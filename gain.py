@@ -1,4 +1,5 @@
-function gain(Set, Attr):
+
+def gain(Set, Attr):
 	ent=calc_entropy(Set)
 	i=0
 	j=0
