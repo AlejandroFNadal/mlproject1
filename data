@@ -1,0 +1,4 @@
+import numpy as np
+S=np.loadtxt("ourdata.csv",delimiter=" ")
+j=Entropy(S)
+print(j)
