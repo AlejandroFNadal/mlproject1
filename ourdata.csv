@@ -1,0 +1,6 @@
+id,a1,a2,a3,class
+1,a,a,c,IE
+2,d,c,a,N
+3,t,c,d,EI
+4,a,d,t,N
+5,d,d,t,IE
