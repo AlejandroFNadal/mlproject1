@@ -13,7 +13,5 @@ class Element:
     
     def printElement(self):
         print(self.id_e)
-        print(self.attributes)
-        print(self.clas)
-
-
+        #   print(self.attributes)
+        #print(self.clas)

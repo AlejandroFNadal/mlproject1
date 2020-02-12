@@ -23,3 +23,25 @@ def entropy(S):
   E=-E
   return E
   
+def entropy_list(S):
+  classes=np.array([],dtype=int)
+  for x in S:
+    classes=np.append(classes,[x.clas])
+  L=np.unique(classes)
+  print(L)
+  E=0 #contains entropy
+  a=0 #a is index of count
+  count=np.zeros(L.size,dtype=int) #number of elements of each class
+  for x in classes:
+    for clas in L:
+      #count[a]=len(S.clas==clas)
+      if x == clas:
+        count[a]+=1
+      a+=1
+    a=0
+  cc=classes.size
+  for x in count:
+    E=E+log2(int(x)/cc)*x/cc
+  E=-E
+  temp_Set=None
+  return E
