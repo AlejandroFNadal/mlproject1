@@ -9,6 +9,6 @@ class node:
 
     def addChildren(self):
         x= node()
-        elements.append(x)
+        self.elements.append(x)
 
     

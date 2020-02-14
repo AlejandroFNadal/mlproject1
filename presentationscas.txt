@@ -9,3 +9,12 @@ Export jidt code into Python, Matlab or Java, Create enough data to fill discret
 	To measure top down TE to 3 subpopulations -- calculate TE individually to each of the 3 subp...
 		afterwards average all 30 (10x3) together for the Figure showing TE. 
 
+Measures of Complexity:
+
+GellMann efefective complexity:
+
+The lenght of the shortest description of a set regularities. We do not measure the random parts. 
+
+
+
+
