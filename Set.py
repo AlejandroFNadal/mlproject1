@@ -1,9 +1,11 @@
 import numpy as np
+import pandas as pd
 class Sets:
     #attributes=np.array([])
     #clas=np.array([])
     elements=[] #It contains instances of element, so it must be a list 
 
+        
     def getClasses(self):
         temp_clas=np.array([],dtype=int)
         for elem in self.elements:

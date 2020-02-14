@@ -8,8 +8,17 @@ def listToSet(List):
 		temp.addElement(elem)
 	return temp
 
-def gain(dataSet, Attr):
-	ent=entropy(dataSet)
+def gain(dataSet, Attr,subfunction): #subfunction 1 Entropy, 2 Gini Index, 3 Misclassification Error
+	if subfunction not in [1,2,3]:
+		print("Incorrect subfunction parameter")
+		return 0
+	if subfunction==1:
+		ent=entropy(dataSet)
+	elif subfunction == 2:
+		ent=gini_index(dataSet)
+	else:
+		if subfunction == 3:
+			pass
 	i=0
 	j=0
 	#First, we need to obtain the number of unique values for the attribute. The attribute must be given as a number
@@ -50,6 +59,8 @@ def gain(dataSet, Attr):
 		print("entropy of subset")
 		print(entropy_list(subsets_list[j]))
 		print("---")
-		right_term=right_term-(sums[j]/len(attColumn))*entropy_list(subsets_list[j])
-	
+		if subfunction == 1:
+			right_term=right_term-(sums[j]/len(attColumn))*entropy_list(subsets_list[j])
+		elif subfunction == 2:
+			right_term=right_term-(sums[j]/len(attColumn))*gini_index_list(subsets_list[j])
 	return ent+right_term

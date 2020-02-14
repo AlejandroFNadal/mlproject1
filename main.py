@@ -21,6 +21,4 @@ for i in range(0,a.shape[0]): #run the matrix going down
 print("Entropy of complete Set")
 print(entropy(data))
 print("---")
-#print(gain(data,3))
-print("Gini Index of data")
-print(gini_index(data))
+print(gain(data,1,1))
