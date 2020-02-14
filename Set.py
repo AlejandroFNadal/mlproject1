@@ -1,7 +1,7 @@
 import numpy as np
 class Sets:
-    attributes=np.array([])
-    clas=np.array([])
+    #attributes=np.array([])
+    #clas=np.array([])
     elements=[] #It contains instances of element, so it must be a list 
 
     def getClasses(self):

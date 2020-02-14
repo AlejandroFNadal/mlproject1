@@ -45,3 +45,25 @@ def entropy_list(S):
   E=-E
   temp_Set=None
   return E
+
+def gini_index(S):#it takes a Sets object
+  print("Classes")
+  print(S.getClasses())
+  print("---")
+  classes=S.getClasses()
+  L=np.unique(classes) #each class
+  Gini=0 #contains gini index
+  a=0 #a is index of count
+  count=np.zeros(L.size,dtype=int) #number of elements of each class
+  for x in classes:
+    for clas in L:
+      if x == clas:
+        count[a]+=1
+      a+=1
+    a=0
+  cc=classes.size
+  Sum=0
+  for x in count:
+    Sum=Sum+(int(x)/cc)**2
+  Gini=1-Sum
+  return Gini
