@@ -3,6 +3,10 @@ from Set import *
 from entropy import *
 from gain import *
 from element import *
+import pandas as pd
+
+a=pd.read_csv('mitcheldata.csv',header=0,index_col=0, sep=",") 
+#header =0 overrides the column names, index_col=0 makes the first column to be an index
 a=np.genfromtxt('mitcheldata.csv',delimiter=',',skip_header=True,dtype=int)
 classColumn=a.shape[1] -1 #Get the last column, that is the class
 
