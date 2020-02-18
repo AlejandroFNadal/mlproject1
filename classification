@@ -1,0 +1,13 @@
+import pandas as pd
+import numpy as np
+df= pd.read_csv("C:\\Users\\harsh\\Downloads\\training.csv")
+df.head()
+def simplecheckpurity(data):
+    
+    #putting last columns into labels  
+    labels=data[:,-1]
+    un=np.unique(labels)
+    if len(un==1):
+        return True
+    else:
+        return False
