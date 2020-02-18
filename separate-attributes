@@ -1,0 +1,5 @@
+import pandas as pd
+df2= pd.read_csv("C://Users//harsh//Documents//training.csv")
+df2.columns= ['a', 'b','labels']
+df2.head()
+df2['b'].apply(lambda x: pd.Series(list(x)))
