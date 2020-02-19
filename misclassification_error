@@ -1,0 +1,25 @@
+from math import log2
+def misclassification_error(S):
+  print("Classes")
+  print(S.getClasses())
+  print("---")
+  classes=S.getClasses()
+  L=np.unique(classes)
+  print(L)
+  M=0 #contains entropy
+  a=0 #a is index of count
+  count=np.zeros(L.size,dtype=int) #number of elements of each class
+  for x in classes:
+    for clas in L:
+      #count[a]=len(S.clas==clas)
+      if x == clas:
+        count[a]+=1
+      a+=1
+    a=0
+  cc=classes.size
+  max1=a[0]/cc
+  for x in range[1:count]:
+    max2=a[x]/cc
+    if max2>max1:
+        max1=max2
+  return max1
